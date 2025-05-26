@@ -323,4 +323,17 @@ a {
     }
 }
 
+footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #608d4f;
+    padding: 2rem 5%;
+}
 
+.footer-content {
+    display: flex;
+    color: #608d4f;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
