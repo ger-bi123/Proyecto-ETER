@@ -128,3 +128,179 @@ a {
     }
 }
 
+/* CSS DEL SECTION DEL CARRUSEL */
+
+.conteiner-carrusel {
+    width: 90%; /* Ancho del contenedor */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin: 30px auto; /* Centra el carrusel */
+    overflow: hidden; /* Muy importante para ocultar las diapositivas que no están visibles */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative; /* Para posicionar elementos internos como flechas o puntos */
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Altura fija del carrusel, ajusta según tus imágenes */
+}
+/*sirve para ocultar los radio buttons*/
+.carrusel input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%; /* 100% * número de diapositivas (5 en este caso) */
+    height: 100%;
+    transition: margin-left 0.7s ease-in-out; /* Animación de desplazamiento */
+}
+
+.slide {
+    width: 20%; 
+    flex-shrink: 0; 
+    background-color: #f0f0f0; 
+}
+
+.slide-link {
+    display: flex; /* Permite que la imagen y la info se alineen */
+    align-items: center; /* Centra verticalmente contenido */
+    justify-content: center; /* Centra horizontalmente contenido */
+    width: 100%; /* El enlace ocupa todo el ancho de la diapositiva */
+    height: 100%; /* El enlace ocupa toda la altura de la diapositiva */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: inherit; /* Hereda el color del texto del padre */
+    cursor: pointer; /* Indica que es clicable */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.slide-link:hover {
+    background-color: #e6e6e6; /* Un ligero cambio de fondo al pasar el ratón */
+}
+
+.slide img {
+    max-width: 50%; /* La imagen ocupa la mitad del ancho de la diapositiva */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 5px;
+    margin-right: 20px; /* Espacio entre la imagen y la info */
+}
+
+.slide-info {
+    max-width: 45%; /* La info ocupa la otra mitad */
+    padding: 20px;
+    text-align: left;
+}
+
+.slide-info h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.slide-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.slide-info .price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff; /* Color para el precio */
+    display: block; /* Para que ocupe toda la línea */
+    margin-bottom: 20px;
+}
+
+.navegacion-manual {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Asegura que estén por encima de las diapositivas */
+}
+
+.manual-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7); /* Puntos blancos semitransparentes */
+    border: 2px solid #007bff; /* Borde del punto */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.manual-btn:hover {
+    background-color: #007bff;
+}
+
+#slide-1:checked ~ .slides { margin-left: 0; }
+#slide-2:checked ~ .slides { margin-left: -100%; } /* Mueve 100% de una diapositiva */
+#slide-3:checked ~ .slides { margin-left: -200%; }
+#slide-4:checked ~ .slides { margin-left: -300%; }
+#slide-5:checked ~ .slides { margin-left: -400%; }
+
+/* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
+#slide-1:checked ~ .navigation-manual .manual-btn:nth-child(1),
+#slide-2:checked ~ .navigation-manual .manual-btn:nth-child(2),
+#slide-3:checked ~ .navigation-manual .manual-btn:nth-child(3),
+#slide-4:checked ~ .navigation-manual .manual-btn:nth-child(4),
+#slide-5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+    background-color: #007bff; /* El punto activo se vuelve azul */
+    border-color: #007bff;
+}
+
+/* --- Media Queries para Carrusel (Responsividad) --- */
+@media (max-width: 992px) {
+    .carousel {
+        height: 400px;
+    }
+    .slide img {
+        max-width: 40%;
+    }
+    .slide-info h2 {
+        font-size: 1.8em;
+    }
+    .slide-info p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 350px;
+    }
+    .slide-link {
+        flex-direction: column; /* Apila imagen y texto en pantallas pequeñas */
+        justify-content: center;
+        padding: 15px;
+    }
+    .slide img {
+        max-width: 80%; /* Imagen más grande en móviles */
+        height: auto;
+        margin-right: 0; /* Elimina el margen derecho si se apila */
+        margin-bottom: 15px; /* Espacio debajo de la imagen */
+    }
+    .slide-info {
+        max-width: 100%; /* Ocupa todo el ancho */
+        padding: 0;
+        text-align: center; /* Centra el texto en móviles */
+    }
+    .slide-info h2 {
+        font-size: 1.5em;
+    }
+    .slide-info p {
+        font-size: 0.9em;
+    }
+    .slide-info .price {
+        font-size: 1.5em;
+    }
+}
+
+
