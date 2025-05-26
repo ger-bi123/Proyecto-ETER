@@ -10,7 +10,7 @@ a {
     color: inherit;
  }
  .conteiner-header {
-    background-color: #98ffdd;
+    background-color: #608d4f;
     padding: 15px 15px; 
     display: flex; 
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
@@ -256,7 +256,7 @@ a {
     border-color: #007bff;
 }
 
-/* --- Media Queries para Carrusel (Responsividad) --- */
+/* --- Media Queries para Carrusel (Responsividad) re sacado de chatgpt tambien  --- */
 @media (max-width: 992px) {
     .carousel {
         height: 400px;
