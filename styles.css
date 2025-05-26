@@ -131,20 +131,20 @@ a {
 /* CSS DEL SECTION DEL CARRUSEL */
 
 .conteiner-carrusel {
-    width: 90%; /* Ancho del contenedor */
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    width: 90%; 
+    max-width: 1200px; 
     margin: 30px auto; /* Centra el carrusel */
-    overflow: hidden; /* Muy importante para ocultar las diapositivas que no están visibles */
+    overflow: hidden; /*no tocar esto */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    position: relative; /* Para posicionar elementos internos como flechas o puntos */
+    background-color: #7c7a7a;
+    position: relative; 
 }
 
 .carrusel {
     position: relative;
     width: 100%;
-    height: 450px; /* Altura fija del carrusel, ajusta según tus imágenes */
+    height: 600px; /* Altura fija del carrusel, ajusta según tus imágenes */
 }
 /*sirve para ocultar los radio buttons*/
 .carrusel input[type="radio"] {
@@ -165,19 +165,19 @@ a {
 }
 
 .slide-link {
-    display: flex; /* Permite que la imagen y la info se alineen */
-    align-items: center; /* Centra verticalmente contenido */
-    justify-content: center; /* Centra horizontalmente contenido */
-    width: 100%; /* El enlace ocupa todo el ancho de la diapositiva */
-    height: 100%; /* El enlace ocupa toda la altura de la diapositiva */
-    text-decoration: none; /* Elimina el subrayado por defecto */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    height: 100%; 
+    text-decoration: none; 
     color: inherit; /* Hereda el color del texto del padre */
     cursor: pointer; /* Indica que es clicable */
     transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
 }
 
 .slide-link:hover {
-    background-color: #e6e6e6; /* Un ligero cambio de fondo al pasar el ratón */
+    background-color: #e6e6e6; /* hover de cambio de fondo al pasar el ratón */
 }
 
 .slide img {
@@ -196,14 +196,14 @@ a {
 
 .slide-info h2 {
     font-size: 2.2em;
-    color: #333;
+    color: #1d1d1d;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .slide-info p {
     font-size: 1.1em;
-    color: #666;
+    color: #414141;
     margin-bottom: 15px;
     line-height: 1.5;
 }
@@ -211,7 +211,7 @@ a {
 .slide-info .price {
     font-size: 1.8em;
     font-weight: bold;
-    color: #007bff; /* Color para el precio */
+    color: #3c755d; /* Color para el precio */
     display: block; /* Para que ocupe toda la línea */
     margin-bottom: 20px;
 }
@@ -231,13 +231,13 @@ a {
     height: 15px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.7); /* Puntos blancos semitransparentes */
-    border: 2px solid #007bff; /* Borde del punto */
+    border: 2px solid #80f57c; /* Borde del punto */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .manual-btn:hover {
-    background-color: #007bff;
+    background-color: #69ff4b;
 }
 
 #slide-1:checked ~ .slides { margin-left: 0; }
