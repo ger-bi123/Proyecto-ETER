@@ -239,7 +239,7 @@ a {
 .manual-btn:hover {
     background-color: #69ff4b;
 }
-
+/*  SLIDES DE LOS PANTALONES*/
 #slide-1:checked ~ .slides { margin-left: 0; }
 #slide-2:checked ~ .slides { margin-left: -100%; } /* Mueve 100% de una diapositiva */
 #slide-3:checked ~ .slides { margin-left: -200%; }
@@ -255,6 +255,26 @@ a {
     background-color: #007bff; /* El punto activo se vuelve azul */
     border-color: #007bff;
 }
+
+
+/* SLIDES DE LAS REMERAS */
+
+#slide-A1:checked ~ .slides { margin-left: 0; }
+#slide-A2:checked ~ .slides { margin-left: -100%; } /* Mueve 100% de una diapositiva */
+#slide-A3:checked ~ .slides { margin-left: -200%; }
+#slide-A4:checked ~ .slides { margin-left: -300%; }
+#slide-A5:checked ~ .slides { margin-left: -400%; }
+
+/* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
+#slide-A1:checked ~ .navigation-manual .manual-btn:nth-child(1),
+#slide-A2:checked ~ .navigation-manual .manual-btn:nth-child(2),
+#slide-A3:checked ~ .navigation-manual .manual-btn:nth-child(3),
+#slide-A4:checked ~ .navigation-manual .manual-btn:nth-child(4),
+#slide-A5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+    background-color: #007bff; /* El punto activo se vuelve azul */
+    border-color: #007bff;
+}
+
 
 /* --- Media Queries para Carrusel (Responsividad) re sacado de chatgpt tambien  --- */
 @media (max-width: 992px) {
