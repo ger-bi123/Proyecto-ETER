@@ -275,6 +275,24 @@ a {
     border-color: #007bff;
 }
 
+/* SLIDES DE LOS BUZOS */
+
+#slide-B1:checked ~ .slides { margin-left: 0; }
+#slide-B2:checked ~ .slides { margin-left: -100%; } /* Mueve 100% de una diapositiva */
+#slide-B3:checked ~ .slides { margin-left: -200%; }
+#slide-B4:checked ~ .slides { margin-left: -300%; }
+#slide-B5:checked ~ .slides { margin-left: -400%; }
+
+/* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
+#slide-B1:checked ~ .navigation-manual .manual-btn:nth-child(1),
+#slide-B2:checked ~ .navigation-manual .manual-btn:nth-child(2),
+#slide-B3:checked ~ .navigation-manual .manual-btn:nth-child(3),
+#slide-B4:checked ~ .navigation-manual .manual-btn:nth-child(4),
+#slide-B5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+    background-color: #007bff; 
+    border-color: #007bff;
+}
+
 
 /* --- Media Queries para Carrusel (Responsividad) re sacado de chatgpt tambien  --- */
 @media (max-width: 992px) {
