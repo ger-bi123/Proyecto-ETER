@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e2e2e2;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+ }
+ .conteiner-header {
+    background-color: #98ffdd;
+    padding: 15px 15px; 
+    display: flex; 
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+     min-height: 60px;
+}
+/* seccionado de los espacios que ocupa cada cosa en el header*/
+.header-interino {
+   
+    flex-basis: 33%;
+    display: flex; 
+    align-items: center;
+}
+
+/* Estilos de las redes sociales */
+.redes-sociales {
+    justify-content: flex-start; 
+    gap: 15px; 
+    font-size: 32px;
+}
+
+.redes-sociales a {
+    color: #1a1a1a;
+    transition: color 0.3s ease; 
+}
+
+.redes-sociales a:hover {
+    color: #093799; 
+}
+
+/* Estilos del titulo de la pagina */
+
+.titulo-pagina {
+    justify-content: center; 
+    text-align: center; 
+    flex-grow: 1; 
+}
+
+.titulo-pagina h1 {
+    margin: 0; 
+    font-size: 3.8em; 
+    color: #1d1d1d;
+}
+
+/* Estilos del carrito */
+
+.carrito-icono {
+    justify-content: flex-end; 
+    gap: 8px; 
+    font-size: 28px; 
+    position: relative; /* Para posicionar el contador del carrito */
+}
+
+.carrito-icono a {
+    color: #1d1d1d;
+    transition: color 0.3s ease;
+}
+
+.carrito-icono a:hover {
+    color: #28a745; 
+}
+
+.contador-carrito {
+    background-color: #dc3545; 
+    color: white;
+    font-size: 0.5em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute; 
+    top: -5px; 
+    right: -5px; 
+}
+
+/* media queries (para que la pagina sea adaptable a celulares (re sacado de chatgpt)) */
+@media (max-width: 768px) {
+    .conteiner-header {
+        flex-wrap: wrap; 
+        padding: 10px;
+    }
+
+    .header-interino {
+        flex-basis: 100%; 
+        justify-content: center; 
+        margin-bottom: 10px; 
+    }
+
+    .titulo-pagina{
+        order: 1;
+    }
+
+    .redes-sociales {
+        order: 2; 
+        margin-top: 5px;
+    }
+
+    .carrito-icono {
+        order: 3; 
+        margin-top: 5px;
+    }
+
+    .carrito-icono {
+        top: 0px; 
+        right: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-pagina {
+        font-size: 1.5em; 
+    }
+    .redes-sociales, .carrito-icono{
+        font-size: 20px; 
+    }
+}
+
