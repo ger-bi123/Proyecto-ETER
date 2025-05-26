@@ -252,7 +252,7 @@ a {
 #slide-3:checked ~ .navigation-manual .manual-btn:nth-child(3),
 #slide-4:checked ~ .navigation-manual .manual-btn:nth-child(4),
 #slide-5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
-    background-color: #007bff; /* El punto activo se vuelve azul */
+    background-color: #007bff; 
     border-color: #007bff;
 }
 
@@ -271,7 +271,7 @@ a {
 #slide-A3:checked ~ .navigation-manual .manual-btn:nth-child(3),
 #slide-A4:checked ~ .navigation-manual .manual-btn:nth-child(4),
 #slide-A5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
-    background-color: #007bff; /* El punto activo se vuelve azul */
+    background-color: #007bff; 
     border-color: #007bff;
 }
 
