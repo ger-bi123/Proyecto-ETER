@@ -1,8 +1,19 @@
+:root {
+  --color-principal: #333;
+  --color-secundario: #e2e2e2;
+  --color-icono: #80f57c;
+  --color-redes: #093799;
+  --color-check: #007bff;
+  --color-contcarrito: #dc3545;
+  --color-precio: #3c755d;
+  --color-negro: black;
+
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #e2e2e2;
-    color: #333;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
     scroll-behavior: smooth;
 }
 
@@ -35,12 +46,12 @@ a {
 }
 
 .redes-sociales a {
-    color: #000000;
+    color: var(--color-negro);
     transition: color 0.3s ease; 
 }
 
 .redes-sociales a:hover {
-    color: #093799; 
+    color: var(--color-redes); 
 }
 
 /* Estilos del titulo de la pagina */
@@ -54,7 +65,7 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: #ffffff;
+    color: var(--color-secundario);
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Desplazamiento horizontal, vertical, desenfoque, color y opacidad */
 }
 
@@ -68,16 +79,16 @@ a {
 }
 
 .carrito-icono a {
-    color: #1d1d1d;
+    color: var(--color-principal);
     transition: color 0.3s ease;
 }
 
 .carrito-icono a:hover {
-    color: #28a745; 
+    color: var(--color-icono); 
 }
 
 .contador-carrito {
-    background-color: #dc3545; 
+    background-color: var(--color-contcarrito); 
     color: white;
     font-size: 0.5em;
     font-weight: bold;
@@ -141,8 +152,9 @@ a {
     overflow: hidden; /*no tocar esto */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #7c7a7a;
+    background-color: var(--color-principal);
     position: relative; 
+    /*#7c7a7a*/
 }
 
 .carrusel {
@@ -165,7 +177,7 @@ a {
 .slide {
     width: 20%; 
     flex-shrink: 0; 
-    background-color: #f0f0f0; 
+    background-color: var(--color-secundario); 
 }
 
 .slide-link {
@@ -181,7 +193,7 @@ a {
 }
 
 .slide-link:hover {
-    background-color: #e6e6e6; /* hover de cambio de fondo al pasar el ratón */
+    background-color: var(--color-secundario); /* hover de cambio de fondo al pasar el ratón */
 }
 
 .slide img {
@@ -200,22 +212,22 @@ a {
 
 .slide-info h2 {
     font-size: 2.2em;
-    color: #1d1d1d;
+    color: var(--color-negro);
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .slide-info p {
     font-size: 1.1em;
-    color: #414141;
+    color: var(--color-principal);
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
-.slide-info .price {
+.slide-info .precio {
     font-size: 1.8em;
     font-weight: bold;
-    color: #3c755d; /* Color para el precio */
+    color: var(--color-precio); /* #3c755d Color para el precio */
     display: block; /* Para que ocupe toda la línea */
     margin-bottom: 20px;
 }
@@ -235,13 +247,13 @@ a {
     height: 15px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.7); /* Puntos blancos semitransparentes */
-    border: 2px solid #80f57c; /* Borde del punto */
+    border: 2px solid var(--color-icono); /* Borde del punto */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .manual-btn:hover {
-    background-color: #69ff4b;
+    background-color: var(--color-icono);
 }
 /*  SLIDES DE LOS PANTALONES*/
 #slide-1:checked ~ .slides { margin-left: 0; }
@@ -256,8 +268,8 @@ a {
 #slide-3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
 #slide-4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
 #slide-5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
-    background-color: #007bff; 
-    border-color: #007bff;
+    background-color: var(--color-check); 
+    border-color: var(--color-check);
 }
 
 
@@ -275,8 +287,8 @@ a {
 #slide-A3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
 #slide-A4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
 #slide-A5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
-    background-color: #007bff; 
-    border-color: #007bff;
+    background-color: var(--color-check); 
+    border-color: var(--color-check);
 }
 
 /* SLIDES DE LOS BUZOS */
@@ -293,8 +305,8 @@ a {
 #slide-B3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
 #slide-B4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
 #slide-B5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
-    background-color: #007bff; 
-    border-color: #007bff;
+    background-color: var(--color-check); 
+    border-color: var(--color-check);
 }
 
 
@@ -353,14 +365,14 @@ a {
 
 
 footer {
-       background-image: linear-gradient(to bottom, #dbdbdb, #242424);
-    border-top: 1px solid #dbdbdb;
+       background-image: linear-gradient(to bottom, #e2e2e2 , #333);
+    border-top: 1px solid var(--color-secundario);
     padding: 2rem 5%;
 }
 
 .footer-content {
     display: flex;
-    color: #000000;
+    color: var(--color-negro);
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
