@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e2e2e2;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -119,6 +120,8 @@ a {
         right: 0px;
     }
 }
+
+
 
 @media (max-width: 480px) {
     .titulo-pagina {
@@ -248,11 +251,11 @@ a {
 #slide-5:checked ~ .slides { margin-left: -400%; }
 
 /* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
-#slide-1:checked ~ .navigation-manual .manual-btn:nth-child(1),
-#slide-2:checked ~ .navigation-manual .manual-btn:nth-child(2),
-#slide-3:checked ~ .navigation-manual .manual-btn:nth-child(3),
-#slide-4:checked ~ .navigation-manual .manual-btn:nth-child(4),
-#slide-5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+#slide-1:checked ~ .navegacion-manual .manual-btn:nth-child(1),
+#slide-2:checked ~ .navegacion-manual .manual-btn:nth-child(2),
+#slide-3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
+#slide-4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
+#slide-5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
     background-color: #007bff; 
     border-color: #007bff;
 }
@@ -267,11 +270,11 @@ a {
 #slide-A5:checked ~ .slides { margin-left: -400%; }
 
 /* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
-#slide-A1:checked ~ .navigation-manual .manual-btn:nth-child(1),
-#slide-A2:checked ~ .navigation-manual .manual-btn:nth-child(2),
-#slide-A3:checked ~ .navigation-manual .manual-btn:nth-child(3),
-#slide-A4:checked ~ .navigation-manual .manual-btn:nth-child(4),
-#slide-A5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+#slide-A1:checked ~ .navegacion-manual .manual-btn:nth-child(1),
+#slide-A2:checked ~ .navegacion-manual .manual-btn:nth-child(2),
+#slide-A3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
+#slide-A4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
+#slide-A5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
     background-color: #007bff; 
     border-color: #007bff;
 }
@@ -285,11 +288,11 @@ a {
 #slide-B5:checked ~ .slides { margin-left: -400%; }
 
 /* Cuando un radio button está chequeado, cambiamos el estilo de su label asociado (punto activo) */
-#slide-B1:checked ~ .navigation-manual .manual-btn:nth-child(1),
-#slide-B2:checked ~ .navigation-manual .manual-btn:nth-child(2),
-#slide-B3:checked ~ .navigation-manual .manual-btn:nth-child(3),
-#slide-B4:checked ~ .navigation-manual .manual-btn:nth-child(4),
-#slide-B5:checked ~ .navigation-manual .manual-btn:nth-child(5) {
+#slide-B1:checked ~ .navegacion-manual .manual-btn:nth-child(1),
+#slide-B2:checked ~ .navegacion-manual .manual-btn:nth-child(2),
+#slide-B3:checked ~ .navegacion-manual .manual-btn:nth-child(3),
+#slide-B4:checked ~ .navegacion-manual .manual-btn:nth-child(4),
+#slide-B5:checked ~ .navegacion-manual .manual-btn:nth-child(5) {
     background-color: #007bff; 
     border-color: #007bff;
 }
@@ -297,11 +300,11 @@ a {
 
 /* --- Media Queries para Carrusel (Responsividad) re sacado de chatgpt tambien  --- */
 @media (max-width: 992px) {
-    .carousel {
+    .carrusel {
         height: 400px;
     }
     .slide img {
-        max-width: 40%;
+        max-width: 60%;
     }
     .slide-info h2 {
         font-size: 1.8em;
@@ -309,10 +312,15 @@ a {
     .slide-info p {
         font-size: 1em;
     }
+    .slide-info {
+        padding: 10px;
+        max-width: 40%;
+    }
 }
 
+
 @media (max-width: 768px) {
-    .carousel {
+    .carrusel {
         height: 350px;
     }
     .slide-link {
@@ -325,10 +333,11 @@ a {
         height: auto;
         margin-right: 0; /* Elimina el margen derecho si se apila */
         margin-bottom: 15px; /* Espacio debajo de la imagen */
+        margin: 0 auto 10px; /*agregado*/
     }
     .slide-info {
-        max-width: 100%; /* Ocupa todo el ancho */
-        padding: 0;
+        max-width: 90%; /* Ocupa 90% todo el ancho */
+        padding: 10px;
         text-align: center; /* Centra el texto en móviles */
     }
     .slide-info h2 {
@@ -341,6 +350,7 @@ a {
         font-size: 1.5em;
     }
 }
+
 
 footer {
        background-image: linear-gradient(to bottom, #dbdbdb, #242424);
@@ -356,3 +366,5 @@ footer {
     max-width: 1400px;
     margin: 0 auto;
 }
+
+/* Hace el sitio responsive */
