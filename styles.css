@@ -431,5 +431,66 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
+/*
+ESPACIO DE PRUEBA DE CSS PARA EL SECTION DE LAS PAGINAS INDIVIDUALES
+*/
+.pag-individual {
+    display: flex; /* Hacemos que la sección sea un contenedor flex */
+    gap: 30px; /* Espacio entre las imágenes y la descripción */
+    align-items: flex-start; /* Alinea los elementos al inicio de su eje cruzado */
+    padding: 20px; /* Espaciado interno general de la sección */
+}
+
+.imagenes-container {
+    display: flex; /* Hacemos que el contenedor de imágenes sea flex */
+    flex-direction: column; /* Apilamos las imágenes verticalmente */
+    gap: 15px; /* Espacio entre cada imagen */
+    flex: 1; /* Permite que este contenedor ocupe el espacio disponible */
+}
+
+.imagenes-container img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio extra debajo de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados para las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra para las imágenes */
+}
+
+.descripcion-container {
+    flex: 2; /* Permite que este contenedor ocupe el doble de espacio que el de imágenes */
+    padding: 20px; /* Espaciado interno para la descripción */
+    background-color: #f9f9f9; /* Color de fondo opcional para la descripción */
+    border-radius: 8px; /* Opcional: bordes redondeados para la descripción */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Opcional: sombra para la descripción */
+}
+
+.descripcion-container h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.descripcion-container p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .pag-individual {
+        flex-direction: column; /* Apila las imágenes y la descripción en columnas en pantallas pequeñas */
+        gap: 20px;
+    }
+
+    .imagenes-container,
+    .descripcion-container {
+        flex: unset; /* Quita la flexibilidad y permite que ocupen el ancho completo */
+        width: 100%;
+    }
+}
+
+
+
 
 /* Hace el sitio responsive */
