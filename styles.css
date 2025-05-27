@@ -10,7 +10,7 @@ a {
     color: inherit;
  }
  .conteiner-header {
-    background-color: #608d4f;
+     background-image: linear-gradient(to bottom, #1d1d1d, #d3d3d3);
     padding: 15px 15px; 
     display: flex; 
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
@@ -34,7 +34,7 @@ a {
 }
 
 .redes-sociales a {
-    color: #1a1a1a;
+    color: #000000;
     transition: color 0.3s ease; 
 }
 
@@ -53,7 +53,8 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: #1d1d1d;
+    color: #ffffff;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Desplazamiento horizontal, vertical, desenfoque, color y opacidad */
 }
 
 /* Estilos del carrito */
@@ -342,14 +343,14 @@ a {
 }
 
 footer {
-    background-color: #1a1a1a;
-    border-top: 1px solid #608d4f;
+       background-image: linear-gradient(to bottom, #dbdbdb, #242424);
+    border-top: 1px solid #dbdbdb;
     padding: 2rem 5%;
 }
 
 .footer-content {
     display: flex;
-    color: #608d4f;
+    color: #000000;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
