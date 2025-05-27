@@ -1,9 +1,9 @@
 :root {
   --color-principal: #333;
-  --color-secundario: #e2e2e2;
+  --color-secundario: #ffffffe7;
   --color-icono: #80f57c;
-  --color-redes: #093799;
-  --color-check: #007bff;
+  --color-check: #2ac625;
+  --color-redes: #5b80d0;
   --color-contcarrito: #dc3545;
   --color-precio: #3c755d;
   --color-negro: black;
@@ -11,7 +11,7 @@
 }
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif, Arial;
     background-color: var(--color-secundario);
     color: var(--color-principal);
     scroll-behavior: smooth;
@@ -22,13 +22,14 @@ a {
     color: inherit;
  }
  .conteiner-header {
-     background-image: linear-gradient(to bottom, #1d1d1d, #d3d3d3);
+     background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
     padding: 15px 15px; 
     display: flex; 
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Centra verticalmente los elementos */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
      min-height: 60px;
+
 }
 /* seccionado de los espacios que ocupa cada cosa en el header*/
 .header-interino {
@@ -65,7 +66,7 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: var(--color-secundario);
+    color: white;
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Desplazamiento horizontal, vertical, desenfoque, color y opacidad */
 }
 
@@ -130,6 +131,9 @@ a {
         top: 0px; 
         right: 0px;
     }
+    .productos {
+    flex-direction: column;
+  }
 }
 
 
@@ -160,8 +164,9 @@ a {
 .carrusel {
     position: relative;
     width: 100%;
-    height: 600px; /* Altura fija del carrusel, ajusta según tus imágenes */
+    height: 600px;  /*Altura fija del carrusel, ajusta según tus imágenes */
 }
+
 /*sirve para ocultar los radio buttons*/
 .carrusel input[type="radio"] {
     display: none;
@@ -193,7 +198,7 @@ a {
 }
 
 .slide-link:hover {
-    background-color: var(--color-secundario); /* hover de cambio de fondo al pasar el ratón */
+    background-color: #dadadab0; /* hover de cambio de fondo al pasar el ratón */
 }
 
 .slide img {
@@ -348,7 +353,7 @@ a {
         margin: 0 auto 10px; /*agregado*/
     }
     .slide-info {
-        max-width: 90%; /* Ocupa 90% todo el ancho */
+        max-width: 100%; /* Ocupa todo el ancho */
         padding: 10px;
         text-align: center; /* Centra el texto en móviles */
     }
@@ -363,11 +368,22 @@ a {
     }
 }
 
+.whatsapp-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: var(--color-principal);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 50%;
+  font-size: 15px;
+  text-decoration: none;
+}
 
 footer {
-       background-image: linear-gradient(to bottom, #e2e2e2 , #333);
+    background-image: linear-gradient(to bottom, #e2e2e2 , #1d1d1d);
     border-top: 1px solid var(--color-secundario);
-    padding: 2rem 5%;
+    padding: 2rem 3%;
 }
 
 .footer-content {
@@ -377,6 +393,43 @@ footer {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    font-size: 1em
+}
+.suscripcion {
+  text-align: left;
+}
+
+.suscripcion-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre input y botón */
+}
+
+.suscripcion-form input[type="email"] {
+    
+  width: 200px; /* ancho más corto */
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+.subscribe-btn {
+  background-color: #111; /* o tu color principal */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: var(--color-contcarrito); /* o color de acento */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Hace el sitio responsive */
