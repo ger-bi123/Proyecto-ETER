@@ -431,41 +431,10 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
-/*
-ESPACIO DE PRUEBA DE CSS PARA EL SECTION DE LAS PAGINAS INDIVIDUALES
-*/
 
-.conteiner-sec-ind {
 
-  display: flex;
-    flex-direction: column;
-    align-items: center;
 
-}
 
-.imagenes-ind {
-  
-          width: 50%; /* Ajusta el tamaño de las imágenes */
-    max-width: 100px; /* Máximo tamaño para evitar que sean demasiado grandes */
-    flex-grow: 1; /* Permite que crezcan si hay espacio disponible */
-    flex-shrink: 1; 
-
-}
-
-.img-primaria {
-    order: 1;
-   
-
-}
-.img-secundaria {
-    order: 2;
-  
-}
-
-.img-terciaria{
-    order: 3;
-   
-}
 
 
 
