@@ -3,7 +3,7 @@
   --color-secundario: #ffffffe7;
   --color-icono: #1a1a1a;
   --color-check: #363636;
-  --color-redes: #5b80d0;
+  --color-redes: white;
   --color-contcarrito: #dc3545;
   --color-precio: #3c755d;
   --color-negro: black;
@@ -11,7 +11,7 @@
 }
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif, Arial;
+    font-family: 'Montserrat', 'Open Sans', sans-serif, Arial, Montserrat;
     background-color: var(--color-secundario);
     color: var(--color-principal);
     scroll-behavior: smooth;
@@ -63,7 +63,7 @@ a {
 }
 
 .redes-sociales a:hover {
-    color: var(--color-redes); 
+    color: var(--color-secundario);
 }
 
 /* Estilos del titulo de la pagina */
@@ -78,7 +78,6 @@ a {
     margin: 0; 
     font-size: 3.8em; 
     color: white;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Desplazamiento horizontal, vertical, desenfoque, color y opacidad */
 }
 
 /* Estilos del carrito */
