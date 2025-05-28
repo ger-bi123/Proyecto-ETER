@@ -1,0 +1,136 @@
+
+/* taejeta individual principal de la pagina */
+.tarjeta-individual {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    max-width: 100%; /* Aumentamos un poco el ancho máximo para acomodar el nuevo diseño */
+    max-height: 850px;
+    width: auto;
+     height: auto;
+    overflow: hidden;
+}
+/* contenido de la tarjeta  */
+.tarjeta-container {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    max-width: 100%; /* Aumentamos un poco el ancho máximo para acomodar el nuevo diseño */
+    max-height: 850px;
+    width: auto;
+     height: auto;
+    overflow: hidden;
+}
+
+/* Sección que contiene la imagen principal y las miniaturas */
+.seccion-galeria {
+    flex: 1 1 300px; /* Le damos más espacio base a la sección de la galería */
+    padding: 15px;
+    /* gallery-section ya no necesita ser flex-direction: column; directamente */
+    min-width: 250px; /* Aseguramos un ancho mínimo para toda la sección de imágenes */
+}
+
+/* Contenedor de la imagen principal Y la lista de miniaturas (nuevo Flexbox) */
+.imagen-principal {
+    display: flex; /* Habilita Flexbox */
+    flex-direction: row; /* Imagen principal a la izquierda, miniaturas a la derecha */
+    gap: 20px; /* Espacio entre la imagen principal y las miniaturas */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+}
+/* imagen principal */
+.imagen-main {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.25rem;
+    /* Ajustes para la imagen principal dentro del nuevo layout */
+    flex-shrink: 0; /* Evita que la imagen principal se encoja para dejar espacio a las miniaturas */
+    width: 300px; /* Ancho fijo para la imagen principal en el layout de escritorio */
+    height: 450px; /* Altura fija para la imagen principal */
+    object-fit: cover; /* Recorta si la imagen no encaja, cubre el área */
+    padding: 15px;
+
+}
+
+/* Contenedor para las miniaturas verticales */
+.vertical-mini-imagenes {
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Apila las miniaturas verticalmente */
+    justify-content: flex-start; /* Alinea las miniaturas al inicio verticalmente */
+    gap: 8px; /* Espacio entre miniaturas */
+    max-height: 500px; /* Limita la altura del contenedor de miniaturas para que no se desborde */
+    overflow-y: auto; /* Agrega scroll si hay demasiadas miniaturas */
+    padding: 15px; /* Un poco de padding si aparece scrollbar */
+}
+
+.mini-imagen {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    cursor: pointer; /* Indica que son clickeables */
+    transition: transform 0.2s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.mini-imagen:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    border-color: #007bff; /* Resalta el borde al pasar el ratón */
+}
+
+.tarjeta-texto {
+    flex: 1 1 300px; /* Mantiene el espacio base para el texto */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-titulo {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.tarjeta-descripcion {
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-meta {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Estilo del botón */
+.tarjeta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.tarjeta-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
