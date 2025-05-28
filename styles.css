@@ -1,8 +1,8 @@
 :root {
   --color-principal: #333;
   --color-secundario: #ffffffe7;
-  --color-icono: #80f57c;
-  --color-check: #2ac625;
+  --color-icono: #1a1a1a;
+  --color-check: #363636;
   --color-redes: #5b80d0;
   --color-contcarrito: #dc3545;
   --color-precio: #3c755d;
@@ -85,7 +85,7 @@ a {
 }
 
 .carrito-icono a:hover {
-    color: var(--color-icono); 
+    color: green; 
 }
 
 .contador-carrito {
