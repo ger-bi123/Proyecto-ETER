@@ -5,11 +5,13 @@
     border: 1px solid #dee2e6;
     border-radius: 0.375rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    max-width: 100%; /* Aumentamos un poco el ancho máximo para acomodar el nuevo diseño */
-    max-height: 850px;
-    width: auto;
-     height: auto;
-    overflow: hidden;
+     max-width: 1300px; 
+    margin: 20px auto; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px;
+    align-items: flex-start; 
+    padding: 20px;
 }
 /* contenido de la tarjeta  */
 .tarjeta-container {
@@ -134,3 +136,51 @@
     border-color: #0056b3;
 }
 
+
+/* En pantallas de hasta 768px (tabletas y móviles grandes) */
+@media (max-width: 768px) {
+    .tarjeta-individual {
+        flex-direction: column; /* Apila el bloque de imágenes y el texto */
+    }
+
+    .seccion-galeria,
+    .tarjeta-texto {
+        flex: 1 1 100%; /* Ocupan todo el ancho disponible */
+        padding: 10px;
+    }
+
+    .imagen-principal {
+        flex-direction: column; /* Apila la imagen principal y las miniaturas en móviles */
+        align-items: center; /* Centra ambos en móviles */
+        gap: 15px; /* Espacio entre imagen principal y miniaturas apiladas */
+    }
+
+    .imagen-main {
+        max-width: 80%; /* Más pequeña en móvil */
+        height: auto; /* Dejamos que se ajuste a la proporción */
+        width: auto; /* Eliminar ancho fijo */
+        object-fit: contain; /* Asegura que la imagen completa se vea */
+    }
+
+    .vertical-mini-imagenes {
+        flex-direction: row; /* Las miniaturas se vuelven horizontales en móvil para ahorrar espacio */
+        flex-wrap: wrap; /* Permite que las miniaturas salten de línea */
+        justify-content: center; /* Centra las miniaturas */
+        max-height: none; /* Elimina la altura máxima */
+        overflow-y: visible; /* Elimina el scrollbar */
+        padding-right: 0;
+    }
+}
+
+/* En pantallas de hasta 480px (móviles) */
+@media (max-width: 480px) {
+    .mini-imagen {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tarjeta-btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
