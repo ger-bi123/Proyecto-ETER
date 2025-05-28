@@ -22,21 +22,26 @@ a {
     color: inherit;
  }
  .conteiner-header {
-     background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
-    padding: 15px 15px; 
-    display: flex; 
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
-     min-height: 60px;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    overflow: visible;
 }
 /* seccionado de los espacios que ocupa cada cosa en el header*/
 .header-interino {
-   
-    flex-basis: 33%;
-    display: flex; 
+    flex: 1 1 auto;     
+    display: flex;
     align-items: center;
+    min-width: 0;
 }
 
 /* Estilos de las redes sociales */
