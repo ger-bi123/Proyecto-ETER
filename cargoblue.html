@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cargo blue</title>
+     <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesindi.css">
+     <script src="path/to/your/script.js"></script>
+</head>
+<body>
+     <header class="conteiner-header"> 
+    <!--div de las redes sociales de la pagina-->
+    <div class="header-interino redes-sociales">
+       
+        <a href="http://facebook.com/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+   <i class="fab fa-whatsapp"></i>
+    </a>
+     </div>
+
+     <div class="header-interino titulo-pagina">
+            <h1>ETER</h1>
+        </div>
+<!--div del carrito de compras -->
+<div class="header-interino carrito-icono">
+  <a href="carrito.html" aria-label="Carrito de compras">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="contador-carrito">0</span>
+  </a>
+</div>
+</header>
+
+<!-- pagina individual  -->
+<!-- tarjeta individual para las prendas -->
+ <article class="tarjeta-individual">
+  <!-- contenido de la tarjeta -->
+        <div class="tarjeta-conteiner">
+          <!-- seccion de la galeria  -->
+            <div class="seccion-galeria">
+              <!-- imagen principal -->
+                <div class="imagen-principal">
+                    <img src="img-eter/DSC_2666-1100x1657.jpg" alt="Imagen principal de la galería" class="imagen-main">
+                    <div class="vertical-mini-imagenes swiper-container">
+                      <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                        <img src="img-eter/DSC_1111-456.jpg" alt="Miniatura 1" class="mini-imagen">
+                            </div>
+                              <div class="swiper-slide">
+                        <img src="img-eter/DSC_2663-1100x1656.jpg" alt="Miniatura 2" class="mini-imagen">
+                        </div>
+                              <div class="swiper-slide">
+                        <img src="img-eter/DSC_2668-1100x1656.jpg" alt="Miniatura 3" class="mini-imagen">
+                       </div>
+                              <div class="swiper-slide">
+                        <img src="img-eter/DSC_2666-1100x1657.jpg" alt="Miniatura 4" class="mini-imagen">
+                        </div>
+                </div>
+                 <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+            </div>
+                </div>
+        </div>
+        </div>
+
+        <div class="tarjeta-texto">
+                <h2 class="tarjeta-titulo">Título de la Galería</h2>
+                <p class="tarjeta-descripcion">
+                    Esta es una galería donde la imagen principal se muestra al lado de miniaturas verticales.
+                    El texto de la tarjeta se encuentra a la derecha de todo el bloque de imágenes, creando un diseño dinámico.
+                </p>
+                <p class="tarjeta-meta">
+                    <small>Última actualización hace 3 minutos</small>
+                </p>
+                <a href="#" class="tarjeta-btn">Ver más detalles</a>
+            </div>
+
+
+
+       
+    </article>
+
+     <!-- JAVASCRIPT NO TOCAR -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var miniSwiper = new Swiper('.vertical-mini-imagenes', {
+                direction: 'vertical',
+                slidesPerView: 3, // Muestra 3 miniaturas a la vez 
+                spaceBetween: 10, // Espacio entre las miniaturas
+                mousewheel: true, // Permite el desplazamiento con la rueda del ratón
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                //  controla la imagen principal al hacer clic en una miniatura
+                on: {
+                    click: function() {
+                        const mainImage = document.querySelector('.imagen-main');
+                        const clickedSlide = this.clickedSlide;
+                        if (clickedSlide) {
+                            const img = clickedSlide.querySelector('.mini-imagen');
+                            if (img && mainImage) {
+                                mainImage.src = img.src;
+                                // Quita la clase 'active-thumbnail' de todas y la añade a la clickeada
+                                document.querySelectorAll('.mini-imagen').forEach(item => item.classList.remove('active-thumbnail'));
+                                img.classList.add('active-thumbnail');
+                            }
+                        }
+                    }
+                }
+            });
+
+            
+            const initialMainImageSrc = document.querySelector('.imagen-main').src;
+            document.querySelectorAll('.mini-imagen').forEach(item => {
+                if (item.src === initialMainImageSrc) {
+                    item.classList.add('active-thumbnail');
+                }
+            });
+        });
+    </script>
+
+<script src="path/to/your/script.js"></script>
+</body>
+</html>
