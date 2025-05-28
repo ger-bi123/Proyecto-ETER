@@ -57,13 +57,23 @@
 }
 
 /* Contenedor para las miniaturas verticales */
-.vertical-mini-imagenes {
-    display: flex; /* Habilita Flexbox */
-    flex-direction: column; /* Apila las miniaturas verticalmente */
-    justify-content: flex-start; /* Alinea las miniaturas al inicio verticalmente */
-    gap: 8px; /* Espacio entre miniaturas */
-    max-height: 500px; /* Limita la altura del contenedor de miniaturas para que no se desborde */
-     padding: 15px; /* Un poco de padding si aparece scrollbar */
+.vertical-mini-imagenes.swiper-container { /* Agregamos .swiper-container para ser más específicos */
+    width: 220px; /* Ajusta el ancho total del contenedor del carrusel si es necesario */
+    height: 480px; /* **¡Muy importante!** Define una altura fija para el carrusel vertical */
+    display: flex; /* Swiper lo hará flex, pero lo mantenemos para consistencia */
+    flex-direction: column; /* Lo mantenemos, Swiper lo manejará internamente */
+    justify-content: flex-start;
+    gap: 8px; /* El espacio lo manejará Swiper ahora con spaceBetween */
+    /* max-height: 500px;  Esto lo reemplaza la altura fija del swiper-container */
+    padding: 0; /* No necesitamos padding aquí si el gap lo maneja Swiper */
+    overflow: hidden; /* Oculta cualquier barra de desplazamiento nativa */
+} 
+
+.vertical-mini-imagenes .swiper-slide {
+    display: flex; /* Asegura que la imagen dentro del slide se centre/alinee */
+    justify-content: center;
+    align-items: center;
+    /* Puedes ajustar el ancho y alto del slide si necesitas que sea diferente de la imagen */
 }
 
 .mini-imagen {
@@ -75,6 +85,25 @@
     cursor: pointer; /* Indica que son clickeables */
     transition: transform 0.2s ease-in-out; /* Animación suave al hacer hover */
 }
+
+.mini-imagen.active-thumbnail {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+.vertical-mini-imagenes .swiper-button-next,
+.vertical-mini-imagenes .swiper-button-prev {
+    color: #007bff; /* Color de las flechas */
+}
+.vertical-mini-imagenes .swiper-button-next {
+    bottom: 0; /* Posicionar en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Ajusta el tamaño de los botones */
+    height: 30px;
+    margin-bottom: -15px; /* Ajuste para centrar verticalmente si es necesario */
+}
+
 
 .mini-imagen:hover {
     transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
@@ -182,5 +211,29 @@
     .tarjeta-btn {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .vertical-mini-imagenes.swiper-container {
+        height: auto; /* Permite que el carrusel ajuste su altura en móviles */
+        width: 100%;
+        flex-direction: row; /* Las miniaturas se vuelven horizontales en móvil */
+    }
+    .vertical-mini-imagenes .swiper-wrapper {
+        flex-direction: row; /* Swiper maneja esto internamente para horizontal */
+    }
+    .vertical-mini-imagenes .swiper-slide {
+        width: 80px !important; /* Ancho fijo para cada slide en horizontal */
+        height: 80px !important; /* Altura fija para cada slide en horizontal */
+    }
+    .mini-imagen {
+        width: 100%;
+        height: 100%;
+    }
+    .vertical-mini-imagenes .swiper-button-next,
+    .vertical-mini-imagenes .swiper-button-prev {
+        /* Puedes ocultarlos o reubicarlos para móvil */
+        display: none;
     }
 }
