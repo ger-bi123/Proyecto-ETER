@@ -22,14 +22,25 @@ a {
     color: inherit;
  }
  .conteiner-header {
-     background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
-    padding: 15px 15px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* Fondo transparente con degradado superpuesto */
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.300));
+    padding: 0 20px;
+
     display: flex; 
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Centra verticalmente los elementos */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
-     min-height: 60px;
-
+    min-height: 60px;
+    
+    /*
+    background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
+    padding: 15px 15px;
+    */
 }
 /* seccionado de los espacios que ocupa cada cosa en el header*/
 .header-interino {
@@ -73,10 +84,12 @@ a {
 /* Estilos del carrito */
 
 .carrito-icono {
+    
     justify-content: flex-end; 
     gap: 8px; 
     font-size: 28px; 
     position: relative; /* Para posicionar el contador del carrito */
+    margin-right: 40px;
 }
 
 .carrito-icono a {
@@ -150,9 +163,10 @@ a {
 /* CSS DEL SECTION DEL CARRUSEL */
 
 .conteiner-carrusel {
+    
     width: 90%; 
     max-width: 1200px; 
-    margin: 30px auto; /* Centra el carrusel */
+    margin: 100px auto; /* Centra el carrusel */
     overflow: hidden; /*no tocar esto */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -431,12 +445,5 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
-
-
-
-
-
-
-
 
 /* Hace el sitio responsive */
