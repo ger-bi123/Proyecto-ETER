@@ -1,4 +1,3 @@
-
 /* taejeta individual principal de la pagina */
 .tarjeta-individual {
     background-color: #fff;
@@ -236,4 +235,18 @@
         /* Puedes ocultarlos o reubicarlos para móvil */
         display: none;
     }
+}
+
+.conteiner-header {
+    background: linear-gradient(to bottom, rgba(34,34,34,0.85) 0%, rgba(220,220,220,0.7) 60%, rgba(255,255,255,0.6) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(6px);
+}
+body {
+    margin: 0;
+    padding-top: 110px; /* Ajusta según la altura de tu header */
 }
