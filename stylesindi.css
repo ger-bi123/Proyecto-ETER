@@ -39,6 +39,7 @@
     flex-direction: row; /* Imagen principal a la izquierda, miniaturas a la derecha */
     gap: 20px; /* Espacio entre la imagen principal y las miniaturas */
     align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+     transform: scale(1.05);
 }
 /* imagen principal */
 .imagen-main {
@@ -52,7 +53,13 @@
     height: 450px; /* Altura fija para la imagen principal */
     object-fit: cover; /* Recorta si la imagen no encaja, cubre el área */
     padding: 15px;
+    
+    
 
+}
+.imagen-main:hover {
+    transform: scale(1.15); /* Agrandar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Añadir sombra */
 }
 
 /* Contenedor para las miniaturas verticales */
@@ -154,14 +161,14 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    background-color: #007bff;
+    background-color: #151515;
     color: #fff;
-    border-color: #007bff;
+    border-color: #080808;
 }
 
 .tarjeta-btn:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #ff3636;
+    border-color: #e50000;
 }
 
 
