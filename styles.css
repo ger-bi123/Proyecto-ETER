@@ -1,12 +1,11 @@
 :root {
   --color-principal: #333;
   --color-secundario: #ffffffe7;
-  --color-icono: #000000a5;
   --color-check: #363636;
-  --color-redes: white;
   --color-contcarrito: #dc3545;
   --color-precio: #3c755d;
-  --color-negro: black;
+  --color-header: #080808;
+  --color-hover: #ffffffe7;
   --transition: all .3s ease;
 
 }
@@ -59,12 +58,12 @@ a {
 }
 
 .redes-sociales a {
-    color: var(--color-negro);
+    color: var(--color-header);
     transition: color 0.3s ease; 
 }
 
 .redes-sociales a:hover {
-    color: var(--color-secundario);
+    color: var(--color-hover);
 }
 
 /* Estilos del titulo de la pagina */
@@ -78,7 +77,7 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: black;
+    color: var(--color-header);
 }
 
 /* Estilo de Links*/
@@ -87,7 +86,7 @@ a {
     font-size: 18px;
     display: flex;
     gap: 2rem;
-    color: #111;
+    color: var(--color-header);
     font-weight: bold;
     
 }
@@ -106,12 +105,12 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-redes);
+    background-color: var(--color-header);
     transition: var(--transition);
 }
 
 .nav-links a:hover{
-    color: white;
+    color: var(--color-hover);
 }
 
 .nav-links a:hover:after {
@@ -136,7 +135,7 @@ a {
 }
 
 .carrito-icono a:hover {
-    color: white; 
+    color: var(--color-hover); 
 }
 
 .contador-carrito {
@@ -250,7 +249,7 @@ a {
 }
 
 .slide-link:hover {
-    background-color: #dadadab0; /* hover de cambio de fondo al pasar el ratón */
+    background-color: var(--color-hover); /* hover de cambio de fondo al pasar el ratón */
 }
 
 .slide img {
@@ -269,7 +268,7 @@ a {
 
 .slide-info h2 {
     font-size: 2.2em;
-    color: var(--color-negro);
+    color: var(--color-header);
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -310,7 +309,7 @@ a {
 }
 
 .manual-btn:hover {
-    background-color: var(--color-icono);
+    background-color: var(--color-hover);
 }
 /*  SLIDES DE LOS PANTALONES*/
 #slide-1:checked ~ .slides { margin-left: 0; }
@@ -425,7 +424,7 @@ a {
   bottom: 15px;
   right: 15px;
   background-color: var(--color-principal);
-  color: white;
+  color: var(--color-hover);
   padding: 10px 10px;
   border-radius: 50%;
   font-size: 15px;
@@ -440,7 +439,7 @@ footer {
 
 .footer-content {
     display: flex;
-    color: var(--color-negro);
+    color: var(--color-header);
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
@@ -468,7 +467,7 @@ footer {
 }
 
 .subscribe-btn {
-  background-color: #111; /* o tu color principal */
+  background-color: var(--color-header); /* o tu color principal */
   color: white;
   border: none;
   padding: 10px 20px;
