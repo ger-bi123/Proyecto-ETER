@@ -31,12 +31,12 @@ a {
     /* Fondo transparente con degradado superpuesto */
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.200));
     padding: 0 20px;
-
     display: flex; 
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Centra verticalmente los elementos */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
     min-height: 60px;
+    backdrop-filter: blur (6px);
     
     /*
     background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
@@ -78,7 +78,7 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: white;
+    color: black;
 }
 
 /* Estilo de Links*/
