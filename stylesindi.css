@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding-top: 110px; /* Ajusta según la altura de tu header */
+}
+
 /* taejeta individual principal de la pagina */
 .tarjeta-individual {
     background-color: #fff;
@@ -171,6 +176,13 @@
     border-color: #e50000;
 }
 
+.select-talle {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
 
 /* En pantallas de hasta 768px (tabletas y móviles grandes) */
 @media (max-width: 768px) {
@@ -243,7 +255,7 @@
         display: none;
     }
 }
-
+/* ESTO ESTA DE MAS!
 .conteiner-header {
     background: linear-gradient(to bottom, rgba(34,34,34,0.85) 0%, rgba(220,220,220,0.7) 60%, rgba(255,255,255,0.6) 100%);
     position: fixed;
@@ -253,7 +265,4 @@
     left: 0;
     backdrop-filter: blur(6px);
 }
-body {
-    margin: 0;
-    padding-top: 110px; /* Ajusta según la altura de tu header */
-}
+*/
