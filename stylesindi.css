@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding-top: 110px; /* Ajusta según la altura de tu header */
+}
+
+/* taejeta individual principal de la pagina */
+.tarjeta-individual {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+     max-width: 1300px; 
+    margin: 20px auto; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px;
+    align-items: flex-start; 
+    padding: 20px;
+}
+/* contenido de la tarjeta  */
+.tarjeta-container {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    max-width: 100%; 
+     max-height: 850px;
+    width: auto;
+     height: auto;
+    overflow: hidden;
+}
+
+/* Sección que contiene la imagen principal y las miniaturas */
+.seccion-galeria {
+    flex: 1 1 300px; /* Le damos más espacio base a la sección de la galería */
+    padding: 15px;
+    /* gallery-section ya no necesita ser flex-direction: column; directamente */
+    min-width: 250px; /* Aseguramos un ancho mínimo para toda la sección de imágenes */
+}
+
+/* Contenedor de la imagen principal Y la lista de miniaturas (nuevo Flexbox) */
+.imagen-principal {
+    display: flex; /* Habilita Flexbox */
+    flex-direction: row; /* Imagen principal a la izquierda, miniaturas a la derecha */
+    gap: 20px; /* Espacio entre la imagen principal y las miniaturas */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+     transform: scale(1.05);
+}
+/* imagen principal */
+.imagen-main {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.25rem;
+    /* Ajustes para la imagen principal dentro del nuevo layout */
+    flex-shrink: 0; /* Evita que la imagen principal se encoja para dejar espacio a las miniaturas */
+    width: 300px; /* Ancho fijo para la imagen principal en el layout de escritorio */
+    height: 450px; /* Altura fija para la imagen principal */
+    object-fit: cover; /* Recorta si la imagen no encaja, cubre el área */
+    padding: 15px;
+    
+    
+
+}
+.imagen-main:hover {
+    transform: scale(1.15); /* Agrandar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Añadir sombra */
+}
+
+/* Contenedor para las miniaturas verticales */
+.vertical-mini-imagenes.swiper-container { /* Agregamos .swiper-container para ser más específicos */
+    width: 220px; /* Ajusta el ancho total del contenedor del carrusel si es necesario */
+    height: 480px; /* **¡Muy importante!** Define una altura fija para el carrusel vertical */
+    display: flex; /* Swiper lo hará flex, pero lo mantenemos para consistencia */
+    flex-direction: column; /* Lo mantenemos, Swiper lo manejará internamente */
+    justify-content: flex-start;
+    gap: 8px; /* El espacio lo manejará Swiper ahora con spaceBetween */
+    /* max-height: 500px;  Esto lo reemplaza la altura fija del swiper-container */
+    padding: 0; /* No necesitamos padding aquí si el gap lo maneja Swiper */
+    overflow: hidden; /* Oculta cualquier barra de desplazamiento nativa */
+} 
+
+.vertical-mini-imagenes .swiper-slide {
+    display: flex; /* Asegura que la imagen dentro del slide se centre/alinee */
+    justify-content: center;
+    align-items: center;
+    /* Puedes ajustar el ancho y alto del slide si necesitas que sea diferente de la imagen */
+}
+
+.mini-imagen {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    cursor: pointer; /* Indica que son clickeables */
+    transition: transform 0.2s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.mini-imagen.active-thumbnail {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+.vertical-mini-imagenes .swiper-button-next,
+.vertical-mini-imagenes .swiper-button-prev {
+    color: #007bff; /* Color de las flechas */
+}
+.vertical-mini-imagenes .swiper-button-next {
+    bottom: 0; /* Posicionar en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px; /* Ajusta el tamaño de los botones */
+    height: 30px;
+    margin-bottom: -15px; /* Ajuste para centrar verticalmente si es necesario */
+}
+
+
+.mini-imagen:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    border-color: #007bff; /* Resalta el borde al pasar el ratón */
+}
+
+.tarjeta-texto {
+    flex: 1 2 300px; /* Mantiene el espacio base para el texto */
+    
+    padding: 15px;
+   
+    flex-direction: column;
+   
+}
+
+.tarjeta-titulo {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.tarjeta-descripcion {
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-meta {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Estilo del botón */
+.tarjeta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #151515;
+    color: #fff;
+    border-color: #080808;
+}
+
+.tarjeta-btn:hover {
+    background-color: #ff3636;
+    border-color: #e50000;
+}
+
+.select-talle {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* En pantallas de hasta 768px (tabletas y móviles grandes) */
+@media (max-width: 768px) {
+    .tarjeta-individual {
+        flex-direction: column; /* Apila el bloque de imágenes y el texto */
+    }
+
+    .seccion-galeria,
+    .tarjeta-texto {
+        flex: 1 1 100%; /* Ocupan todo el ancho disponible */
+        padding: 10px;
+    }
+
+    .imagen-principal {
+        flex-direction: column; /* Apila la imagen principal y las miniaturas en móviles */
+        align-items: center; /* Centra ambos en móviles */
+        gap: 15px; /* Espacio entre imagen principal y miniaturas apiladas */
+    }
+
+    .imagen-main {
+        max-width: 80%; /* Más pequeña en móvil */
+        height: auto; /* Dejamos que se ajuste a la proporción */
+        width: auto; /* Eliminar ancho fijo */
+        object-fit: contain; /* Asegura que la imagen completa se vea */
+    }
+
+    .vertical-mini-imagenes {
+        flex-direction: row; /* Las miniaturas se vuelven horizontales en móvil para ahorrar espacio */
+        flex-wrap: wrap; /* Permite que las miniaturas salten de línea */
+        justify-content: center; /* Centra las miniaturas */
+        max-height: none; /* Elimina la altura máxima */
+        overflow-y: visible; /* Elimina el scrollbar */
+        padding-right: 0;
+    }
+}
+
+/* En pantallas de hasta 480px (móviles) */
+@media (max-width: 480px) {
+    .mini-imagen {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tarjeta-btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .vertical-mini-imagenes.swiper-container {
+        height: auto; /* Permite que el carrusel ajuste su altura en móviles */
+        width: 100%;
+        flex-direction: row; /* Las miniaturas se vuelven horizontales en móvil */
+    }
+    .vertical-mini-imagenes .swiper-wrapper {
+        flex-direction: row; /* Swiper maneja esto internamente para horizontal */
+    }
+    .vertical-mini-imagenes .swiper-slide {
+        width: 80px !important; /* Ancho fijo para cada slide en horizontal */
+        height: 80px !important; /* Altura fija para cada slide en horizontal */
+    }
+    .mini-imagen {
+        width: 100%;
+        height: 100%;
+    }
+    .vertical-mini-imagenes .swiper-button-next,
+    .vertical-mini-imagenes .swiper-button-prev {
+        /* Puedes ocultarlos o reubicarlos para móvil */
+        display: none;
+    }
+}
+/* ESTO ESTA DE MAS!
+.conteiner-header {
+    background: linear-gradient(to bottom, rgba(34,34,34,0.85) 0%, rgba(220,220,220,0.7) 60%, rgba(255,255,255,0.6) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(6px);
+}
+*/

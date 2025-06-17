@@ -7,6 +7,27 @@
     <link rel="icon" href="img-eter/eter.jpg" type="image/png">
     <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .conteiner-header {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.219) 60%, rgba(255,255,255,0.6) 100%);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(6px);
+    }
+    body {
+        margin: 0;
+        padding-top: 110px; /* Ajusta según la altura de tu header */
+    }
+    .conteiner-carrusel,
+    .carrusel,
+    .slides {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
     </head>
 <body>
     <!--Header de la pagina-->
@@ -26,10 +47,17 @@
      </div>
 
      <div class="header-interino titulo-pagina">
-            <h1>ETER</h1>
+            <li><a href="#inicio"><h1>ÉTER</h1></a></li>
         </div>
+        
 <!--div del carrito de compras -->
 <div class="header-interino carrito-icono">
+    <!--div links -->
+        <ul class="header-interino nav-links">
+            <li><a href="#pantalon">Pantalones</a></li>
+            <li><a href="#remera">Remeras</a></li>
+            <li><a href="#buzo">Buzos</a></li>
+        </ul>
   <a href="carrito.html" aria-label="Carrito de compras">
     <i class="fas fa-shopping-cart"></i>
     <span class="contador-carrito">0</span>
@@ -40,10 +68,10 @@
 
    </header>
    <!-- Section del carrusel de cada producto (Pantalones)-->
-    <section class="conteiner-carrusel">
+    <section id= "inicio"class="conteiner-carrusel">
         
         <!-- inputs del radio de los carrusels de la fila uno-->
-        <div class="carrusel">
+        <div id= "pantalon" class="carrusel">
             
 <input type="radio" name="slider" id="slide-1" checked>
 <input type="radio" name="slider" id="slide-2">
@@ -56,7 +84,7 @@
     <!-- slide individual 1 -->
      <div class="slide">
         <!-- prenda 1-->
-         <a href="#" class="slide-link">
+         <a href="cargoblue.html" class="slide-link">
 <img src="img-eter/DSC_2666-1100x1657.jpg" alt="">
 <!--informacion de prenda 1-->
 <div class="slide-info">
@@ -72,7 +100,7 @@
 
  <div class="slide">
         <!-- prenda 2-->
-         <a href="#" class="slide-link">
+         <a href="baggris.html" class="slide-link">
 <img src="img-eter/DSC_3406-1100x1656.jpg" alt="">
 <!--informacion de prenda 2-->
 <div class="slide-info">
@@ -87,7 +115,7 @@
 
  <div class="slide">
         <!-- prenda 3-->
-         <a href="#" class="slide-link">
+         <a href="baggyextra.html" class="slide-link">
 <img src="img-eter/DSC_3474-768x1156.jpg" alt="">
 <!--informacion de prenda 3-->
 <div class="slide-info">
@@ -103,7 +131,7 @@
 
  <div class="slide">
         <!-- prenda 4-->
-         <a href="#" class="slide-link">
+         <a href="cortechino.html" class="slide-link">
 <img src="img-eter/DSC_4268-1100x1656.jpg" alt="">
 <!--informacion de prenda 4-->
 <div class="slide-info">
@@ -119,13 +147,13 @@
 
  <div class="slide">
         <!-- prenda 5-->
-         <a href="#" class="slide-link">
-<img src="img-eter/DSC_4268-1100x1656.jpg" alt="">
+         <a href="bagancho.html" class="slide-link">
+<img src="img-eter/blu jean.jpg" alt="">
 <!--informacion de prenda 5-->
 <div class="slide-info">
-<h2>prueba (editar luego)</h2>
-<p>Alto buzardo buenardovich</p>
-<span class="precio">$4.000</span>
+<h2>Jean Blue</h2>
+<p>Jean corte ancho</p>
+<span class="precio">$4.700</span>
 </div>
          </a>
 
@@ -145,7 +173,7 @@
     </section>
     
      <!-- Section del carrusel de cada producto (Remeras) -->
-    <section class="conteiner-carrusel">
+    <section id= "remera" class="conteiner-carrusel">
         <!-- inputs del radio de los carrusels de la fila uno-->
         <div class="carrusel">
 <input type="radio" name="slider" id="slide-A1" checked>
@@ -246,7 +274,7 @@
 
     </section>
 
-     <section class="conteiner-carrusel">
+     <section id= "buzo" class="conteiner-carrusel">
         <!-- inputs del radio de los carrusels de la fila uno-->
         <div class="carrusel">
 <input type="radio" name="slider" id="slide-B1" checked>

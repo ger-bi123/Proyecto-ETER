@@ -1,17 +1,17 @@
 :root {
   --color-principal: #333;
   --color-secundario: #ffffffe7;
-  --color-icono: #1a1a1a;
   --color-check: #363636;
-  --color-redes: #5b80d0;
   --color-contcarrito: #dc3545;
   --color-precio: #3c755d;
-  --color-negro: black;
+  --color-header: #080808;
+  --color-hover: #ffffffe7;
+  --transition: all .3s ease;
 
 }
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif, Arial;
+    font-family: 'Montserrat', 'Open Sans', sans-serif, Arial, Montserrat;
     background-color: var(--color-secundario);
     color: var(--color-principal);
     scroll-behavior: smooth;
@@ -22,19 +22,14 @@ a {
     color: inherit;
  }
  .conteiner-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 60px;
-    overflow: visible;
+     background-image: linear-gradient(to bottom, #1d1d1d, #e2e2e2);
+    padding: 15px 15px; 
+    display: flex; 
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+     min-height: 60px;
+
 }
 /* seccionado de los espacios que ocupa cada cosa en el header*/
 .header-interino {
@@ -52,12 +47,12 @@ a {
 }
 
 .redes-sociales a {
-    color: var(--color-negro);
+    color: var(--color-header);
     transition: color 0.3s ease; 
 }
 
 .redes-sociales a:hover {
-    color: var(--color-redes); 
+    color: var(--color-hover);
 }
 
 /* Estilos del titulo de la pagina */
@@ -71,26 +66,65 @@ a {
 .titulo-pagina h1 {
     margin: 0; 
     font-size: 3.8em; 
-    color: white;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Desplazamiento horizontal, vertical, desenfoque, color y opacidad */
+    color: var(--color-header);
 }
+
+/* Estilo de Links*/
+.nav-links {
+    justify-content: flex-end;
+    font-size: 18px;
+    display: flex;
+    gap: 2rem;
+    color: var(--color-header);
+    font-weight: bold;
+    
+}
+
+.nav-links a{
+    position: relative;
+    padding: .5rem 0;
+    transition: var(--transition);
+    
+}
+
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-header);
+    transition: var(--transition);
+}
+
+.nav-links a:hover{
+    color: var(--color-hover);
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
 
 /* Estilos del carrito */
 
 .carrito-icono {
+    
     justify-content: flex-end; 
     gap: 8px; 
     font-size: 28px; 
     position: relative; /* Para posicionar el contador del carrito */
+    margin-right: 40px;
 }
 
 .carrito-icono a {
-    color: var(--color-principal);
+    color: var(--color-icono);
     transition: color 0.3s ease;
 }
 
 .carrito-icono a:hover {
-    color: green; 
+    color: var(--color-hover); 
 }
 
 .contador-carrito {
@@ -155,9 +189,10 @@ a {
 /* CSS DEL SECTION DEL CARRUSEL */
 
 .conteiner-carrusel {
+    
     width: 90%; 
     max-width: 1200px; 
-    margin: 30px auto; /* Centra el carrusel */
+    margin: 100px auto; /* Centra el carrusel */
     overflow: hidden; /*no tocar esto */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -203,7 +238,7 @@ a {
 }
 
 .slide-link:hover {
-    background-color: #dadadab0; /* hover de cambio de fondo al pasar el ratón */
+    background-color: var(--color-hover); /* hover de cambio de fondo al pasar el ratón */
 }
 
 .slide img {
@@ -222,7 +257,7 @@ a {
 
 .slide-info h2 {
     font-size: 2.2em;
-    color: var(--color-negro);
+    color: var(--color-header);
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -257,13 +292,13 @@ a {
     height: 15px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.7); /* Puntos blancos semitransparentes */
-    border: 2px solid var(--color-icono); /* Borde del punto */
+    border: 2px solid var(--color-check); /* Borde del punto */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .manual-btn:hover {
-    background-color: var(--color-icono);
+    background-color: var(--color-hover);
 }
 /*  SLIDES DE LOS PANTALONES*/
 #slide-1:checked ~ .slides { margin-left: 0; }
@@ -378,7 +413,7 @@ a {
   bottom: 15px;
   right: 15px;
   background-color: var(--color-principal);
-  color: white;
+  color: var(--color-hover);
   padding: 10px 10px;
   border-radius: 50%;
   font-size: 15px;
@@ -393,13 +428,14 @@ footer {
 
 .footer-content {
     display: flex;
-    color: var(--color-negro);
+    color: var(--color-header);
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
     font-size: 1em
 }
+
 .suscripcion {
   text-align: left;
 }
@@ -421,7 +457,7 @@ footer {
 }
 
 .subscribe-btn {
-  background-color: #111; /* o tu color principal */
+  background-color: var(--color-header); /* o tu color principal */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -436,5 +472,6 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
+
 
 /* Hace el sitio responsive */
